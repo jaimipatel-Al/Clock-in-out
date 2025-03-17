@@ -1,3 +1,5 @@
+clock-in clock-out system to monitor authenticated end user’s daily time-sheet records
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
