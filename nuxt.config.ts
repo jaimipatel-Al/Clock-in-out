@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@vee-validate/nuxt"],
   tailwindcss: {
     cssPath: [`/assets/css/tailwind.css`, { injectPosition: "first" }],
     config: {},
