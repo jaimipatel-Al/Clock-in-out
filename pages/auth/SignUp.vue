@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Field, Form } from "vee-validate";
 import * as yup from "yup";
-import imageUrl from "@/assets/images/clock.png";
 
 const name = ref("");
 const email = ref("");
@@ -33,15 +32,7 @@ const onSubmit = () => {
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="bg-white p-8 shadow-lg rounded-lg w-96 m-4 sm:m-0">
-      <h1
-        class="text-4xl font-extrabold text-gray-700 cursor-pointer flex items-center justify-center bg-slate-100"
-      >
-        <img :src="imageUrl" alt="Logo" class="w-12" />
-        Our <span class="text-cyan-800 underline">HRMS</span>
-      </h1>
-      <h2 class="text-2xl text-center font-semibold my-4 text-gray-700">
-        Sign Up
-      </h2>
+      <ElementsAuthHeader title="Sign Up" />
 
       <Form
         :validation-schema="schema"
@@ -92,13 +83,8 @@ const onSubmit = () => {
           />
           <p class="text-red-500 text-xs sm:text-sm">{{ errors?.ConfirmPassword }}</p>
         </div>
-
-        <button
-          type="submit"
-          class="w-full bg-cyan-800 text-white py-2 rounded-md hover:bg-cyan-600"
-        >
-          Sign Up
-        </button>
+        
+        <ElementsBtn title="Sign Up"/>
       </Form>
     </div>
   </div>

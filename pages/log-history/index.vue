@@ -1,25 +1,30 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/24/solid";
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 </script>
 
 <template>
   <div>
-    <div class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 shadow-lg">
-      <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-cyan-800">Clock In Out History</h2>
-    </div>
+    <ElementsTitle title="Clock In Out History" />
+
     <div class="p-4 sm:p-6 md:p-10">
       <table class="w-full bg-slate-100 text-gray-700 text-sm sm:text-base md:text-lg">
         <tr class="font-bold border-b border-gray-300">
           <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">Date</th>
-          <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">Effective hr.</th>
-          <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">Gross hr.</th>
+          <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Effective hr.
+          </th>
+          <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Gross hr.
+          </th>
           <th class="text-start py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5"></th>
         </tr>
         <tr class="border-b border-gray-300">
-          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5" >Mar 12, 2025</td>
+          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Mar 12, 2025
+          </td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">00:50</td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">00:50</td>
           <td class="w-10 sm:w-12 py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
@@ -30,7 +35,9 @@ const router = useRouter();
           </td>
         </tr>
         <tr class="border-b border-gray-300">
-          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5" >Mar 11, 2025</td>
+          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Mar 11, 2025
+          </td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">00:20</td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">00:20</td>
           <td class="w-10 sm:w-12 py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
@@ -41,7 +48,9 @@ const router = useRouter();
           </td>
         </tr>
         <tr class="border-b border-gray-300">
-          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5" >Mar 10, 2025</td>
+          <td class="font-medium py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Mar 10, 2025
+          </td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">00:20</td>
           <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">02:45</td>
           <td class="w-10 sm:w-12 py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
