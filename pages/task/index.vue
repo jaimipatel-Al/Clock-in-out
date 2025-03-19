@@ -13,70 +13,119 @@ const isInput = ref(false);
 
 <template>
   <div>
-    <div class="flex items-center justify-between px-10 py-5 shadow-lg">
-      <h2 class="text-2xl font-bold text-cyan-800">Task Time Log</h2>
+    <div
+      class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 sm:py-4 md:py-5 shadow-lg"
+    >
+      <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-cyan-800">
+        Task Time Log
+      </h2>
     </div>
-    <div class="px-10">
-      <p class="flex justify-between px-10 pt-10 pb-5">
-        <span class="text-cyan-600 font-bold text-xl">Mar 12, 2025</span>
-        <span class="text-red-600 font-semibold text-base"
+    <div class="px-4 sm:px-6 md:px-10">
+      <p
+        class="flex items-center justify-between px-4 sm:px-6 md:px-10 pt-4 sm:pt-6 md:pt-10 pb-3 sm:pb-4 md:pb-5"
+      >
+        <span class="text-cyan-600 font-bold sm:text-lg md:text-xl"
+          >Mar 12, 2025</span
+        >
+        <span class="text-red-600 font-semibold text-xs sm:text-sm md:text-base"
           >Total Spend Time : {{ totalTime }} Hours</span
         >
       </p>
-      <table class="w-full bg-slate-100 text-gray-700 text-lg">
-        <tr class="font-bold">
-          <td>Task</td>
-          <td>Time</td>
-          <td>Duration</td>
-          <td>Action</td>
+      <table
+        class="w-full bg-slate-100 text-gray-700 text-sm sm:text-base md:text-lg"
+      >
+        <tr class="font-bold border-b border-gray-300">
+          <th class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 text-start">
+            Task
+          </th>
+          <th
+            class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 text-start hidden sm:table-cell"
+          >
+            Time
+          </th>
+          <th
+            class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 text-start hidden sm:table-cell"
+          >
+            Duration
+          </th>
+          <th class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 text-start">
+            Action
+          </th>
         </tr>
-        <tr>
-          <td>The best to-do list app on the market</td>
-
-          <td>5:55 PM - --</td>
-          <td>00:50</td>
-          <td class="flex">
-            <StopCircleIcon class="w-6 mr-2 text-blue-600 cursor-pointer" />
-            <TrashIcon class="w-6 mr-2 text-red-600 cursor-pointer" />
+        <tr class="border-b border-gray-300">
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            The best to-do list app on the market
+              <p class="block sm:hidden text-xs text-gray-500">5:55 PM - --</p>
+              <p class="block sm:hidden text-xs text-gray-500">00:50</p>
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            5:55 PM - --
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            00:50
+          </td>
+          <td class="flex py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            <StopCircleIcon
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-blue-600 cursor-pointer"
+            />
+            <TrashIcon
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-red-600 cursor-pointer"
+            />
           </td>
         </tr>
-        <tr>
-          <td v-if="isInput">
+        <tr class="border-b border-gray-300">
+          <td
+            v-if="isInput"
+            class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5"
+          >
             <input
               type="text"
               class="border px-2 py-1 border-cyan-600 outline-cyan-800"
             />
           </td>
-          <td v-else>Simple, straightforward, and super powerful</td>
-          <td>4:30 PM - 5:30 PM</td>
-          <td>00:20</td>
-          <td class="flex">
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5" v-else>
+            Simple, straightforward, and super powerful
+            <p class="block sm:hidden text-xs text-gray-500">4:30 PM - 5:30 PM</p>
+            <p class="block sm:hidden text-xs text-gray-500">00:20</p>
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            4:30 PM - 5:30 PM
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            00:20
+          </td>
+          <td class="flex py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
             <PencilSquareIcon
-              class="w-6 mr-2 text-green-600 cursor-pointer"
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-green-600 cursor-pointer"
               @click="isInput = !isInput"
             />
-            <TrashIcon class="w-6 mr-2 text-red-600 cursor-pointer" />
+            <TrashIcon
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-red-600 cursor-pointer"
+            />
           </td>
         </tr>
-        <tr>
-          <td>Nothing short of stellar</td>
-          <td>2:30 PM - 3:43 PM</td>
-          <td>02:45</td>
-          <td class="flex">
-            <PencilSquareIcon class="w-6 mr-2 text-green-600 cursor-pointer" />
-            <TrashIcon class="w-6 mr-2 text-red-600 cursor-pointer" />
+        <tr class="border-b border-gray-300">
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            Nothing short of stellar
+            <p class="block sm:hidden text-xs text-gray-500">2:30 PM - 3:43 PM</p>
+            <p class="block sm:hidden text-xs text-gray-500">02:45</p>
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            2:30 PM - 3:43 PM
+          </td>
+          <td class="py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5 hidden sm:table-cell">
+            02:45
+          </td>
+          <td class="flex py-1.5 sm:py-2 md:py-3 px-2 sm:px-3 md:px-5">
+            <PencilSquareIcon
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-green-600 cursor-pointer"
+            />
+            <TrashIcon
+              class="w-5 sm:w-6 mr-1 sm:mr-2 text-red-600 cursor-pointer"
+            />
           </td>
         </tr>
       </table>
     </div>
   </div>
 </template>
-
-<style scoped>
-table tr {
-  border-bottom: 1px solid #ccc;
-}
-table tr td {
-  padding: 10px 40px;
-}
-</style>
