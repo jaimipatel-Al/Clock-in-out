@@ -5,11 +5,13 @@ const totalTime = ref("00:08");
 
 <template>
   <div>
-    <ElementsTitle title="Clock In Out" />
+    <ElementsTitle title="Clock In Out">
+      <ElementsCalendar />
+    </ElementsTitle>
 
     <div class="px-4 sm:px-6 md:px-10">
       <ElementsSubTitle date="Mar 12, 2025" :totalTime="totalTime" />
-     
+
       <table
         class="text-center w-full bg-slate-100 text-gray-700 text-sm sm:text-base md:text-lg"
       >

@@ -34,7 +34,6 @@ const openSidebar = () => {
   document.getElementById("sidebar").classList.add("open");
   document.getElementById("overlay").classList.add("active");
 };
-
 const closeSidebar = () => {
   setTimeout(() => {
     document.getElementById("sidebar").classList.remove("open");

@@ -15,8 +15,10 @@
     "@nuxtjs/tailwindcss": "^6.13.2",
     "@vee-validate/nuxt": "^4.15.0",
     "@vee-validate/yup": "^4.15.0",
+    "flatpickr": "^4.6.13",
     "nuxt": "^3.16.0",
     "vue": "^3.5.13",
+    "vue-flatpickr-component": "^12.0.0",
     "vue-functional-calendar": "^3.0.0",
     "vue-router": "^4.5.0",
     "yup": "^1.6.1"

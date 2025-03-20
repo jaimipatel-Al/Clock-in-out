@@ -9,5 +9,6 @@ const props = defineProps(["title"]);
     <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-cyan-800">
       {{ title }}
     </h2>
+    <slot />
   </div>
 </template>
