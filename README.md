@@ -34,11 +34,11 @@ The Clock In/Out System is a comprehensive time-tracking solution that enables u
 - Users can view past timesheet logs grouped weekly.
 - Option to filter logs by date to see detailed records of clock-ins and clock-outs.
 
-# Nuxt Minimal Starter
+## Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+### Setup
 
 Make sure to install dependencies:
 
@@ -56,7 +56,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -110,7 +110,7 @@ bun run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-## Tech Stack
+### Tech Stack
 
 - **Frontend:** Nuxt, Vue, Tailwind CSS
 - **State Management:** Pinia
@@ -119,7 +119,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - **Notifications:** vue-toast-notification
 - **API Calls:** axios
 
-## GitHub Repository
+### GitHub Repository
 
 - See [GitHub](https://github.com/jaimipatel-Al/Clock-in-out)
 - See [Link]()
